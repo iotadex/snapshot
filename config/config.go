@@ -48,7 +48,4 @@ func init() {
 		copy(addr[:], data)
 		NftAddresses = append(NftAddresses, addr.Bech32(iotago.PrefixShimmer))
 	}
-	for i, id := range NftIds {
-		log.Println(id, NftAddresses[i])
-	}
 }

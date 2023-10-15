@@ -11,7 +11,7 @@ import (
 )
 
 func main() {
-	api.SnapshotNfts()
+	fmt.Println(api.SnapshotNfts(100000000000))
 	return
 	_, data, _ := iotago.ParseBech32("smr1zr8s7kv070hr0zcrjp40fhjgqv9uvzpgx80u7emnp0ncpgchmxpx25paqmf")
 	fmt.Println(hex.EncodeToString((data.(*iotago.NFTAddress))[:]))
@@ -23,9 +23,9 @@ func main() {
 	}
 	fmt.Println(*nft)
 
-	nfts, _, err := c.GetNftsByIssuer("smr1zr8s7kv070hr0zcrjp40fhjgqv9uvzpgx80u7emnp0ncpgchmxpx25paqmf")
-	if err != nil {
-		panic(err)
-	}
-	fmt.Println(len(nfts))
+	//nfts, _, err := c.GetNftsByIssuer("smr1zr8s7kv070hr0zcrjp40fhjgqv9uvzpgx80u7emnp0ncpgchmxpx25paqmf")
+	//if err != nil {
+	//	panic(err)
+	//}
+	//fmt.Println(len(nfts))
 }
